@@ -1,0 +1,24 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio folder
+.vs/
+
+# User-specific files
+*.user
+*.suo
+
+# Debug files
+*.pdb
+*.cache
+
+# Output files
+*.exe
+*.dll
+
+# WinUI / MSIX
+*.appx
+*.msix
+*.msixupload
+*.appxbundle
