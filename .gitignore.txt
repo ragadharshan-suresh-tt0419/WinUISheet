@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.dll
+*.exe
+*.appx
+*.msix
+*.msixupload
+*.appxbundle

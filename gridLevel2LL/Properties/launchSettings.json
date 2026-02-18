@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "gridLevel2LL (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "gridLevel2LL (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
