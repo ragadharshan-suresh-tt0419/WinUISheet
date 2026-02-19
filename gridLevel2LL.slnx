@@ -4,6 +4,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="gridLevel2LL.Data/gridLevel2LL.Data.csproj" Id="36ded636-55b4-4ffd-b9e0-63de85b5d6ff" />
   <Project Path="gridLevel2LL/gridLevel2LL.csproj">
     <Platform Solution="*|ARM64" Project="ARM64" />
     <Platform Solution="*|x64" Project="x64" />

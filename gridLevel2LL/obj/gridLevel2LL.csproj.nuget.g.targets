@@ -14,5 +14,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk.dwrite\1.8.25122902\buildTransitive\Microsoft.WindowsAppSDK.DWrite.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk.dwrite\1.8.25122902\buildTransitive\Microsoft.WindowsAppSDK.DWrite.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk.ai\1.8.47\buildTransitive\Microsoft.WindowsAppSDK.AI.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk.ai\1.8.47\buildTransitive\Microsoft.WindowsAppSDK.AI.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk\1.8.260209005\buildTransitive\Microsoft.WindowsAppSDK.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk\1.8.260209005\buildTransitive\Microsoft.WindowsAppSDK.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.options\8.0.2\buildTransitive\net6.0\Microsoft.Extensions.Options.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.options\8.0.2\buildTransitive\net6.0\Microsoft.Extensions.Options.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\8.0.2\buildTransitive\net6.0\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\8.0.2\buildTransitive\net6.0\Microsoft.Extensions.Logging.Abstractions.targets')" />
   </ImportGroup>
 </Project>

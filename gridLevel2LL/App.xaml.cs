@@ -1,4 +1,7 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -15,6 +18,10 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using gridLevel2LL.Data;
+
+using gridLevel2LL.Data.Entities;
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -24,6 +31,9 @@ namespace gridLevel2LL
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
+    /// 
+
+      
     public partial class App : Application
     {
         private Window? _window;
@@ -32,19 +42,45 @@ namespace gridLevel2LL
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        ///
+
+        public static IServiceProvider Services { get; private set; }
+        
         public App()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+            Services = services.BuildServiceProvider();
         }
 
+
+
+        private void ConfigureServices(ServiceCollection services) { 
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            var ConnectionString = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<Data.GridDbContext>(options =>
+                    options.UseSqlServer(ConnectionString));
+
+        }
+        
         /// <summary>
         /// Invoked when the application is launched.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            _window = new MainWindow();
-            _window.Activate();
+            m_window = new MainWindow();
+            m_window.Activate();
+
+            
         }
+
+        private Window m_window;
     }
 }
