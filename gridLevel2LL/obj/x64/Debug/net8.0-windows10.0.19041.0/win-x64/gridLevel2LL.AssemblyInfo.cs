@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gridLevel2LL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15ddb61019d702b855f447d8cb6b3b49ef2845eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3523a5e3334845c2b4e5d5bfa1362952b0bdd06c")]
 [assembly: System.Reflection.AssemblyProductAttribute("gridLevel2LL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gridLevel2LL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

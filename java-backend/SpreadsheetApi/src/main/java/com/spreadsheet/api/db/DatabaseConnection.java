@@ -1,0 +1,25 @@
+package com.spreadsheet.api.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class DatabaseConnection {
+
+    private static final String DB_URL =
+        "jdbc:sqlserver://localhost:1433;" +
+        "databaseName=SpreadsheetDb;" +
+        "encrypt=false;" +
+        "trustServerCertificate=true;";
+
+    private static final String DB_USER = "sa";
+    private static final String DB_PASSWORD = "12345678";
+
+
+    private DatabaseConnection() {}
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+    }
+}
